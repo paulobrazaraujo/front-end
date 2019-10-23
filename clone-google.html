@@ -1,57 +1,70 @@
-<!DOCTYPE html>
 <html>
-   <head>
-      <title>Google</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <style>
-         a:link {
-         color: black;
-         text-decoration: none;
-         }
-         a:visited {
-         color: black;
-         text-decoration: none;
-         }
-         a:hover {
-         color: grey;
-         text-decoration: underline;
-         }
-         .top {
-          list-style-type: none;
-          text-align: right;
-          margin: 0;
-          padding: 0;         
-         }
-         .top li {
-         display: inline-block;
-         padding: 8px;
-         }
-         .q {
-         position: absolute;
-         background-color: grey;
-         width: 15px;
-         height: 15px;        
-         }
-         .center {
-         position: absolute;
-         width: 50%;
-         height: 50%;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         background-color: grey;
-         }
-      </style>
-   </head>
-   <body>
-      <div class="top">
-         <ul class="nav">
-            <li><a href="#home">Gmail</a></li>
-            <li><a href="#about">Imagens</a></li>
-            <li><a href="#clients"><div class="q"></div></a></li>  
-            <li><a href="#contact">Contact Us</a></li>
-         </ul>
-      </div>
-      <div class="center"></div>
-   </body>
+<head>
+<title>DIV INLINE</title>
+<style>
+.box {
+/*background-color: black;*/
+position: absolute;
+width: 100%;
+height: 60px;
+top: 0px;
+left: 0px;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+.gmail {
+/*background-color: grey;*/
+padding: 10px;
+font-family: Arial;
+font-size: 13px;
+
+}
+.imagens {
+/*background-color: grey;*/
+padding: 10px;
+font-family: Arial;
+font-size: 13px;
+}
+.apps {
+/*background-color: grey;*/
+padding: 10px;
+width: 5px;
+height: 5px;
+background-image: url('icon-apps.png');
+background-size: 100%;
+background-repeat: no-repeat;
+background-position: center;
+}
+.apps:hover {
+/*background-color: grey;*/
+text-align: center;
+padding: 10px;
+background-image: url('icon-apps-hover.png');
+background-size: 100%;
+background-repeat: no-repeat;
+background-position: center;
+}
+.login {
+background-color: #3F85F2;
+border-radius: 4px;
+color: white;
+padding: 8px 16px;
+text-align: center;
+text-decoration: bold;
+font-family: Arial;
+font-size: 13px;
+margin: 4px 2px;
+}
+</style>
+</head>
+<body>
+<div class="box">
+<div class="gmail">Gmail</div>
+<div class="imagens">Imagens</div>
+<div class="apps"></div>
+<buttom class="login">Entrar</buttom>
+<div></div>
+</div>
+</body>
 </html>
