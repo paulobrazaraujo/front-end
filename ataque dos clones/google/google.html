@@ -45,7 +45,6 @@ a:active {
 }
 
 .apps {
-/*background-color: grey;*/
 padding: 10px;
 width: 5px;
 height: 5px;
@@ -57,16 +56,7 @@ background-position: center;
 }
 
 .apps:hover {
-/*background-color: grey;*/
-text-align: center;
-padding: 10px;
-width: 5px;
-height: 5px;
-margin: 5px;
 background-image: url('icon-apps-hover.png');
-background-size: 100%;
-background-repeat: no-repeat;
-background-position: center;
 }
 
 .entrar {
@@ -119,12 +109,12 @@ cursor: auto;
 }
 
 input[type=text]:hover {
-border: white;
+border: 1px solid white;
 box-shadow: 2px 2px 5px #CCC;
 }
 
 input[type=text]:focus {
-border: white;
+border: 1px solid white;
 box-shadow: 2px 2px 5px #CCC;
 }
 
@@ -167,41 +157,57 @@ background-color: #F2F2F2;
 bottom: 0px;
 left: 0px;
 width: 100%;
+display: flex;
+flex-direction: column;
+border-top: 1px solid #e2e2e2;
 }
 
 .pais {
 font-family: Arial;
-font-size: 14px;
+font-size: 15px;
 color: grey;
-padding: 11px;
-margin: 3 3 3 25;
+padding: 15 15 15 30;
 }
 
 .bottom {
-display: flex;
-font-family: Arial;
-font-size: 13px;
-color: grey;
-padding: 11px;
-margin: 3 3 3 25;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-family: Arial;
+	font-size: 13px;
+	color: grey;
+	border-top: 1px solid #e2e2e2;
+}
+.bottom-left {
+	margin: 15 15 15 30;
 }
 
 .bottom-left a {
-padding: 3 25 3 3;
+	padding: 0 20 0 0;
 }
 
 .bottom-right {
-position: absolute;
+position: relative;
 right: 0px;
 display: flex;
-margin: 3 3 3 25;
+margin: 15 30 15 15;
 }
 
 .bottom-right a {
-padding: 3 25 3 3;
+padding: 0 20 0 0;
 }
-
 </style>
+
+<script>
+	function getFocus () {
+		document.getElementById("pesquisar").focus();
+	}
+
+	window.onload = getFocus;
+
+</script>
+
 </head>
 <body>
 <div class="box-top">
@@ -211,10 +217,10 @@ padding: 3 25 3 3;
 <buttom class="entrar">Entrar</buttom>
 </div>
 <div class="center"></div>
-<input type="text" name="pesquisar" placeholder=""></input>
+<input type="text" name="pesquisar" placeholder="" id="pesquisar"></input>
 <buttom class="pesquisa">Pesquisa Google</buttom>
 <buttom class="sorte">Sinto-me com sorte</buttom>
-<div class="pt-br">Disponibilizado pelo Google em: <a href="#">Português (Brasil)</a></div>
+<div class="pt-br">Disponibilizado por Google em: <a href="#" style="color: blue;">Português (Brasil)</a></div>
 
 
 <div class="box-bottom">
@@ -237,5 +243,6 @@ padding: 3 25 3 3;
 
 </div>
 </div>
+
 </body> 
 </html>
